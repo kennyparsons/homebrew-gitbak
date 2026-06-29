@@ -5,23 +5,23 @@
 class Gitbak < Formula
   desc "Get your dotfiles/config files backed up and managed with Git."
   homepage ""
-  version "1.3.1"
+  version "1.3.2"
   license "MIT"
   depends_on :macos
 
   if Hardware::CPU.intel?
-    url "https://github.com/kennyparsons/gitbak/releases/download/v1.3.1/gitbak_Darwin_x86_64.tar.gz"
-    sha256 "6e017f8e6a1b006bfec332385e605f672f178d125c0e31f0cbc19fb8fe2531e5"
+    url "https://github.com/kennyparsons/gitbak/releases/download/v1.3.2/gitbak_Darwin_x86_64.tar.gz"
+    sha256 "80fc71ba9994743db5863c86b2a54b13b55509edbd92ea7a12fd3bb8f8925cbc"
 
-    def install
+    define_method(:install) do
       bin.install "gitbak"
     end
   end
   if Hardware::CPU.arm?
-    url "https://github.com/kennyparsons/gitbak/releases/download/v1.3.1/gitbak_Darwin_arm64.tar.gz"
-    sha256 "205cdb76e6ff1ffe1e6856b36fc8cd0fadb0b6aef7b049547ba7f35e69997f0a"
+    url "https://github.com/kennyparsons/gitbak/releases/download/v1.3.2/gitbak_Darwin_arm64.tar.gz"
+    sha256 "b48ee03fbb2f8f6206418e1ea61058388c8f0c79da859be85d04af5832adb20f"
 
-    def install
+    define_method(:install) do
       bin.install "gitbak"
     end
   end
